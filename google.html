@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projekt ljekarna</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="application-name" content="Ljekarna">
+        <meta name="author" content="Petar Crnjak">
+        <meta name="description" content="Datum izrade: 5.6.2016"> 
+        <link rel="stylesheet" type="text/css" href="css/pcrnjak.css"/>
+        <script src="js/pcrnjak.js" type="text/javascript"></script>
+
+        <style type="text/css">
+            body {
+                background-image: url("img/drugs.jpg");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            label {     font-style: initial;}
+            input {     
+                color: initial;
+                letter-spacing: normal;
+                word-spacing: normal;
+                text-indent: 0px;
+                font-style: italic;
+                background-color: #E4433c;
+                font: 13.3333px Arial;}
+            </style>
+        
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>var map;
+var myMarkers = [];
+/*
+ * create a initialize function
+ */
+function initialize() {
+    var myCenter=new google.maps.LatLng(46.320405, 16.346667);
+    var mapOptions = {
+        center: myCenter,
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+    };
+
+    map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+    SetMarkers();
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+function SetMarkers() {
+    var geocoder = new google.maps.Geocoder();
+    var myData = [];
+
+    // here you can change this JSON for a call to your database
+    myData = [
+        {lat: "46.320405" , lng: "16.346667", address: "Cakovec, Zagrebacka 8"},
+        {lat: "46.390023" , lng: "16.435872",  address: "Ivanec, Varazdinska 2"},
+        {lat: "52.137237" , lng: "-0.456837", name: "Poslovnica 3", address: "Novi Marof,Zagorska 6"},
+        {lat: "52.137237" , lng: "-0.456837", name: "Poslovnica 4", address: "Varazdin,Dravska 21"},
+    ];
+
+    for(i = 0; i < myData.length; i++) {
+        geocoder.geocode({ 'address': myData[i].address }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                myMarkers[i] = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map
+                });
+            } else {
+                console.log("We can't found the address, GoogleMaps say..." + status);
+            }
+        });
+    }
+}
+</script>
+</head>
+
+<body>
+
+            <div id="header">
+            <figure>
+                <h1 id="pocetak">Ljekarna</h1>
+
+                <ul style=" display:inline-block;
+
+                    text-decoration: none;
+                    list-style: none">
+                    <li> <a  href='odjava.php ' > Odjava </a> </li> 
+                </ul>
+            </figure>   
+        </div>
+
+        <aside><nav>
+                <ul>
+                    <li><a href="dokumentacija.html" >Dokumentacija</a></li>
+                    <li><a href="o_autoru.html" >O autoru</a></li>
+                    <li><a href="http://barka.foi.hr/WebDiP/2015_projekti/WebDiP2015x012/privatno/korisnici.php" >Ispis korisnika</a></li>
+                    <li><a href="index.php" >Indeks</a></li>
+                    <li><a href="registracija.php" >Registracija</a></li>
+                    <li><a href="prijava.php">Prijava</a></li>
+                    <li><a href="rezervacija.php">Rezervacija</a></li>
+                    <li><a href="moji_racuni.php">Moji racuni</a></li>
+                     <li><a href="dodavanjeSlika.php">Galerija</a></li>
+                    <li><a href="definiranjeLijekova.php">Definiranje lijekova</a></li>
+                    <li><a href="definiranjeAkcija.php">Definiranje akcija</a></li>
+                    <li><a href="potvrdaRezervacije.php">Potvrda rezervacija</a></li>
+                    <li><a href="kreiranjeRacuna.php">Kreiranje računa</a></li>
+                    <li><a href="dodavanjeStavki.php">Dodavanje stavki</a></li>
+                    <li><a href="kreirani_racuni.php">Kreirani racuni</a></li>
+                    <li><a href="aplikativnaStatistika.php">Aplikativna statistika</a></li>
+                    <li><a href="otkljucavanje.php">Otkljucavanje računa</a></li>
+                    <li><a href="dnevnik.php">Dnevnik</a></li>
+                    <li><a href="postaviVrijeme.php">Postavi vrijeme</a></li>
+                    <li><a href="pomak.php">Virtualno vrijeme</a></li>
+                    <li><a href="kreiranjeKategorija.php">Kreiranje kategorija</a></li>
+                   <li><a href="poslovnice.php">Poslovnice</a></li>
+                   
+
+                </ul>
+            </nav>
+        </aside>
+    <div id="googleMap" style="width:500px;height:380px;"></div>
+      <footer>
+        <div id="footer">
+            <p>Vrijeme potrebno za rješavanja zadatka: 58h</p>
+
+            <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fbarka.foi.hr%2FWebDiP%2F2015%2Fzadaca_04%2Fpcrnjak%2Fprijava.php" target="_blank">
+                <img class="slike" src="https://barka.foi.hr/WebDiP/2015/materijali/zadace/HTML5.png" alt="html" width="50" height="50">
+            </a>
+
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fbarka.foi.hr%2FWebDiP%2F2015%2Fzadaca_04%2Fpcrnjak%2Fprijava.php&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+                <img class="slike" src="https://barka.foi.hr/WebDiP/2015/materijali/zadace/CSS3.png" alt="css" width="50" height="50">
+            </a>
+            <p>&copy; 2016 P. Crnjak</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+

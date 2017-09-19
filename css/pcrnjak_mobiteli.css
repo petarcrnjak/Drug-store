@@ -1,0 +1,36 @@
+@media only screen and ( device-width: 320px) and ( device-height: 480px)
+{
+   
+}
+
+@media only screen and ( device-width: 480px) and ( device-height: 320px){
+  
+}
+
+@media only screen and ( device-width: 640px) and ( device-height: 1136px){
+
+}
+@media only screen and (  device-width: 1136px) and ( device-height: 640px){
+    
+}
+
+@media only screen and ( max-width: 720px){
+nav {
+    width: 38%;
+}
+table.db-table {
+    position: absolute;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: -60%;
+    margin-left: 20%;
+}
+
+}
+@media only screen and ( device-width: 1280px) and ( device-height: 720px){
+    
+   
+}
+@media only screen and (max-width: 1024px) {
+ 
+}

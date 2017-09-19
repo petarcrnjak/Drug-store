@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projekt ljekarna</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="application-name" content="Ljekarna">
+        <meta name="author" content="Petar Crnjak">
+        <meta name="description" content="Datum izrade: 5.6.2016"> 
+        <link rel="stylesheet" type="text/css" href="css/pcrnjak.css"/>
+        <link rel="stylesheet" type="text/css" href="css/pcrnjak_mobiteli.css"/>
+        <style type="text/css">
+
+            label {     font-style: initial;}
+            input {     
+                color: initial;
+                letter-spacing: normal;
+                word-spacing: normal;
+                text-indent: 0px;
+                font-style: italic;
+                background-color: #E4433c;
+                font: 13.3333px Arial;}
+            </style>
+        </head>
+        <body>
+            <div id="header">
+            <figure>
+                <h1 id="pocetak">Web dizajn i programiranje</h1>
+
+                <ul style=" display:inline-block;
+
+                    text-decoration: none;
+                    list-style: none">
+                    <li> <a  href='odjava.php ' class="mail-link"> Odjava </a> </li> 
+                </ul>
+            </figure>   
+        </div>
+        <aside><nav>
+                <ul>
+                    <li><a href="dokumentacija.html" >Dokumentacija</a></li>
+                    <li><a href="o_autoru.html" >O autoru</a></li>
+                    <li><a href="index.php" >Indeks</a></li>
+                    <li><a href="registracija.php" >Registracija</a></li>
+                    <li><a href="prijava.php">Prijava</a></li>
+                    <li><a href="rezervacija.php">Rezervacija</a></li>
+                    <li><a href="moji_racuni.php">Moji racuni</a></li>
+                    <li><a href="definiranjeLijekova.php">Definiranje lijekova</a></li>
+                    <li><a href="definiranjeAkcija.php">Definiranje akcija</a></li>
+                    <li><a href="potvrdaRezervacije.php">Potvrda rezervacija</a></li>
+                    <li><a href="aplikativnaStatistika.php">Aplikativna statistika</a></li>
+                    <li><a href="otkljucavanje.php">Otkljucavanje računa</a></li>
+                    <li><a href="dnevnik.php">Dnevnik</a></li>
+                    <li><a href="postaviVrijeme.php">Postavi vremene</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="body">
+            <h1>Dokumentacija</h1>
+
+            <aside>
+                <nav>
+                    <a href="#sekcija_1_1">1. Opis projektnog zadatka</a><br>
+                    <a href="#sekcija_1_2">2. Opis projektnog rješenja</a><br>
+                    <a href="#sekcija_1_3">3. Bitne odrednice projektnog rješenja (ERA model)</a><br>
+                    <a href="#sekcija_1_4">4. Popis i opis skripata, mapa mjesta, navigacijski dijagram</a><br>
+                    <a href="#sekcija_1_5">5. Popis  i opis koristenih tehnologija i alata</a><br>
+                    <a href="#sekcija_1_6">6. Popis i opis vanjskih (tuđih) modula/biblioteka i njihovo koristenje u skriptama i sl.</a><br>
+                </nav>
+            </aside>
+            <br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><hr>
+
+
+            <h1 id="prvi"></h1><br>
+            <section> <h2 id="sekcija_1_1">1. Opis zadatka</h2>
+                <p>Zadatak ovg projekta je bio napraviti web aplikaciju za lijekarnu sa različitim funkcijama. Podržava više tipova korisnika i prema 
+                    tome svaki tip korisnika može vidjeti samo ono što je za njega predviđeno. Idemo redom: 
+                <p>1) Neregistrirani korisnik- može vidjeti
+                    početnu stranicu, javne dokumente kao o_autoru i dokumentacija te za odabranu kategoriju 3 lijeka kojima akcija najprije završava.
+                </p>
+                <p>2) Registrirani korisnik- postaje registracijom i aktivacijom korisničkog računa. Dobiva puno veće ovlasti samom registracijom. 
+                    Omogućeno mu je rezerviranje lijekova, pregled svojih računa te zahtjev za novom lozinkom.
+                </p>
+                <p>3) Moderator- osim funkija koje ima i registrirani korisnik dobiva duznosti kao sto su definiranje lijekova za određenu kategoriju,
+                    definiranje njihovih akcija,upravljanje rezervacijama i vidi statistiku tko je što označio da mu se sviđa ili ne sviđa.</p>
+                <p>4) Administrator-
+                    uz sve ovo nabrojano, on ima najveće ovlasti i može vidjeti sve. Bavi se otključavanjem ili blokiranjem korisničkih računa, upravljanjem
+                    virtualnim vremenom i vidi statistike.</p>
+
+                <div style="height: 70px">&nbsp;</div>
+            </section>
+
+            <h1></h1>
+            <section><h2 id="sekcija_1_2">2. Opis rješenja</h2> 
+                <p>Sve što je trebalo napraviti u ovom zadatku je napravljeno kako je to zadano u uputama. Kod nekih je stvari bilo dozvoljeno više slobode 
+                    pa se tablica mogla kreirati na način da zadovoljavaju potrebe zadanog funkcioniranja aplikacije. Veći dio funkcionalnosti radi pri ćemu su 
+                    moguće neke sitnije greške poput prikaza greški koje nebi trebale biti ispisane ili se nisu dogodile.</p>
+
+                <div style="height: 70px">&nbsp;</div>
+            </section>
+
+
+            <h1></h1>
+
+            <section><h2 id="sekcija_1_3">3. Bitne odrednice projektnog rješenja (ERA model)</h2>  
+                <figure> 
+                    <a  href="img/era.png">  
+                        <img src="img/era.png" alt="Era model" width="200" height="200">
+                    </a>
+                    <figcaption>Era model</figcaption>
+                    <div style="height: 70px">&nbsp;</div>
+            </section>
+            <h1></h1>
+
+            <section><h2 id="sekcija_1_4">4. Popis i opis skripata, mapa mjesta, navigacijski dijagram</h2>
+                <figure> 
+                    <a  href="img/dijagram.png">  
+                        <img src="img/dijagram.png" alt="navigacijski dijagram" width="200" height="200">
+                    </a>
+                    <figcaption>Navigacijski dijagram </figcaption><br>
+                    <p>Popis skripti s opisom: 
+                    <p>aktivacija.php - Skripta koja se poziva kada korisnik aktivira korisnički račun putem linka
+                        koji mu je došao preko emaila. </p>
+                    <p>aplikativnaStatistika.php -skripta koja nam omogučava da vidimo pregled sviđanja i ne sviđanja
+                        po nekom korisniku ili po lijekovima. </p>
+                    <p>baza.class.php - ovdje se nalaze funkcije koje se koriste za upravljanje podacima iz baze podataka.
+                        Prvenstveno se radi o select, insert, update, delete. </p>
+                    <p>definiranjeLijekova.php - omogućuje da prvo izaberemo kategoriju te nakon toga mozemo unesti novi lijek i njegovu cijenu. </p>
+                    <p>definiranjeAkcija.php - ovdje nam je omoguceno da odabirom neke od kategorija lijekova upišemo njegov id, kolko će posto biti lijek snižen i do kojeg će dana akcija vrijediti. Na kraju 
+                        se upisuje u bazu u tablicu akcije. </p>
+                    <p>Dislike.php Like.php -dvije identične skripte koje ze pozivaju kada korisnik stisne na poveznicu sviđa mi se ili ne sviđa mi se. Ona u bazu zapisuje 
+                        koji korisnik je što označio. </p>
+                    <p>dnevnik.php - osnovna funkcija je da omogućuje biranje datuma te ispiše sve aktivnosti koje su se dogodile na aplikaciji poput prijava,registracija i sl. Može 
+                        filtrirati i za pojedinog korisnika. </p>
+                    <p>dokumentacija.html - sadrži sve potrebe podatke o ovom projektnom zadatku. index.php - naslovna stranica projekta, pristupa se neovisno o tome kojem tipu 
+                        korisnika spadate. </p>
+                    <p>moji_racuni.php - sadrži prikaz svih izdanih računa nekog korisnika. </p>
+                    <p>o_autoru.php - sadrži osnovne podatke o autoru ovog zadatka. </p>
+                    <p>odjava.php- skripta koja omogućuje odjavu 
+                        te time možete vidjeti samo ono što je dostupno neregistriranim korisnicima. </p>
+                    <p>otkljucavanje.php - skripta koja omogucuje da za određenog korisnika postavimo da mu je korisnički račun otključan 
+                        ili ga zaključamo. Samim time dolazi korisniku mail s porukom radnje koju smo obavili. </p>
+                    <p>pomak.php - skripta koja služi da odaberemo pomak za vračanje vremena ili unaprijed. </p>
+                    <p>postaviVrijeme.php - 
+                        dohvati pomak vremena koji smo odredili i onda ga sprema u bazu i tada aplikacija radi na novom virtualnom vremenu. </p>
+                    <p>potvrdaRezervacije.php - omogućuje da se za određenu rezervaciju status potvrdi 
+                        ili se pak ona odbije. </p>
+                    <p>prijava.php- sadrži mogućnost prijave koja ovisno o tipu korisnika koji posjedujete otvara mnoge mogućnosti aplikacije koje nisu svima dostupne. 
+                    </p>
+                    <p>registracija.php - omogućuje 
+                        da se registrirate i time steknete pravo registriranog korisnika. </p>
+                    <p>rezervacija.php-omogućuje rezerviranja određenog lijeka neke kategorije. </p>
+                    <p>ukljuciSmarthy.php - potrebna skripta koja omogućuje da 
+                        možemo dohvatiti predloške koje smo definirali. </p>
+                    <p>zaboravljena.php-ako korisnik zaboravi svoju lozinku, upisom maila stize mu na mail nova generirana lozinka. </p>
+                    <p>pcrnjak.css - sadrzi podatke o prikazu 
+                        elemenata na ekranu. </p>
+                    <p>korisnici.php- ispis svih korisnika iz baze</p>
+
+                    <div style="height: 70px">&nbsp;</div>
+            </section>
+            <h1></h1>
+
+            <section><h2 id="sekcija_1_5">5. Popis  i opis koristenih tehnologija i alata</h2>  
+                <p>Za ovaj projekt koristio sam tehnologije: HTML, CSS, PHP, JavaScript</p>
+
+
+                <div style="height: 70px">&nbsp;</div>
+            </section>
+            <h1></h1>
+
+            <section><h2 id="sekcija_1_6">6. Popis i opis vanjskih (tuđih) modula/biblioteka i njihovo koristenje u skriptama i sl</h2>  
+                <p>Od vanjskih kodova poslužio sam se primjerima iz labosa za dohvat i upravljanje virtualnim
+                    vremenom te sam ga preradio na način koji odgovara mojem projektu. Ostalo sam sve sam u potpunosti izradio.</p>
+
+                <div style="height: 70px">&nbsp;</div>
+            </section>
+
+
+
+            <hr>
+            <footer>
+                <div id="footer">
+                    <p>Vrijeme potrebno za rješavanja zadatka: 58h</p>
+
+                    <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fbarka.foi.hr%2FWebDiP%2F2015%2Fzadaca_04%2Fpcrnjak%2Fprijava.php" target="_blank">
+                        <img class="slike" src="https://barka.foi.hr/WebDiP/2015/materijali/zadace/HTML5.png" alt="html" width="50" height="50">
+                    </a>
+
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fbarka.foi.hr%2FWebDiP%2F2015%2Fzadaca_04%2Fpcrnjak%2Fprijava.php&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+                        <img class="slike" src="https://barka.foi.hr/WebDiP/2015/materijali/zadace/CSS3.png" alt="css" width="50" height="50">
+                    </a>
+                    <p>&copy; 2016 P. Crnjak</p>
+                </div>
+            </footer>
+    </body>
+</html>
